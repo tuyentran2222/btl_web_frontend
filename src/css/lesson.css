@@ -1,6 +1,7 @@
 @import url(config.css);
 @import url(footer.css);
 @import url(navigation.css);
+@import url(lesson_card.css);
 
 .course-name {
   margin: 130px 0px 20px 0px;
@@ -14,30 +15,6 @@
 .left-container {
   padding-right: 30px;
   margin-bottom: 30px;
-}
-
-.lesson-card {
-  border: var(--border);
-  width: 100%;
-  height: 134px;
-  display: flex;
-  margin-top: 10px;
-  background-color: var(--background-color-item);
-}
-
-.lesson-card__time {
-  margin:3px 0px 3px 1px;
-  font-size: 0.75rem;
-  font-weight: 600;
-  display: flex;
-}
-
-.lessons {
-  display: flex;
-  flex-wrap: wrap;
-  /* justify-content: space-evenly; */
-  align-content: space-between;
-  margin-top: 20px;
 }
 
 /* Style tab links */
@@ -102,60 +79,10 @@ div.tab button, #submit-answer, #hide-transcript, #reset-answer {
   color: var(--white);
 }
 
-.lesson-card-left {
-  width:calc(100% - 240px);
-  padding: 10px 20px;
-}
-
-.lesson-card-right {
-  width: 240px;
-  /* height: 135px; */
-  position: relative;
-  z-index : 55;
-}
-
-.lesson-card-right > img {
-  height: 100%;
-}
-
-.lesson-card-right > i {
-  position: absolute;
-  top:calc(50% - 10px);
-  left: calc(50% - 10px);
-  z-index: 50;
-  margin: auto auto;
-  font-size: 20px;
-  cursor: pointer;
-  color: var(--background-color) ;
-}
-
-.lesson-card-right > i:hover {
-  position: absolute;
-  top : calc(50% - 20px);
-  left: calc(50% - 20px);
-  font-size: 40px;
-  display: block;
-}
-
-.lesson-card-right:hover {
-    z-index: 40;
-}
 
 .fa-arrow-circle-right:hover{
   margin-left: 20px;
   transition: 1s ease-in-out;
-}
-
-.lesson-length{
-  background-color: black;
-  color: var(--background-color);
-  position: absolute;
-  bottom: 5px;
-  right : 15px;
-  z-index: 999;
-  letter-spacing: 0.15em;
-  font-size: smaller;
-  padding: 0px 5px;
 }
 
 .course-relate-list {

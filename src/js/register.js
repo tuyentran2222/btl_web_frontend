@@ -121,6 +121,7 @@ function checkSignUpInput(input) {
 function checkSignUpForm() {
     let inputs = signup_form.querySelectorAll('.form-group__input');
     inputs.forEach((input) => checkSignUpInput(input))
+    swal("Welcome!", "Register successfully!", "success");
 }
 signup_btn.onclick = (event) => {
     event.preventDefault();

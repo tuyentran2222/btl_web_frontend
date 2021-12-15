@@ -114,6 +114,7 @@ function checkSignUpForm() {
 signin_btn.onclick = (event) => {
     event.preventDefault();
     checkSignUpForm();
+    swal("Welcome!", "Login successfully!", "success");
 }
 
 let inputs = signin_form.querySelectorAll('.form-group__input');
