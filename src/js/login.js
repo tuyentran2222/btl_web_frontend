@@ -1,5 +1,16 @@
-let signup_form = document.querySelector('#register-form');
-let signup_btn = document.getElementById('signup-btn');
+let dark = localStorage.getItem('dark');
+if (dark == 'true') {
+  let root = document.querySelector(':root');
+    root.style.setProperty('--background-color', 'black');
+    root.style.setProperty('--text-color', '#FFFFFF');
+    root.style.setProperty('color', '#FFFFFF');
+    root.style.setProperty('--border-none', 'var(--border)');
+    root.style.setProperty('--background-color-item', 'black');
+    root.style.setProperty('--title-color', '#FFFFFF');
+    console.log('123')
+}
+let signin_form = document.querySelector('#signin-form');
+let signin_btn = document.getElementById('signin-btn');
 
 const validateEmail = (email) => {
     return String(email)
@@ -14,7 +25,7 @@ function checkSignUpInput(input) {
 
     let value = input.value.trim();
     let form_group = input.parentElement;
-    let err_span = signup_form.querySelector(`span[data-err-for="${input.id}"]`);
+    let err_span = signin_form.querySelector(`span[data-err-for="${input.id}"]`);
     
     switch (input.getAttribute('type')) {
         case 'email': {
@@ -39,17 +50,7 @@ function checkSignUpInput(input) {
             break;
         }
         case 'password' : {
-            if (input.getAttribute('name')=== 'signup-password') {
-                password = input.value;
-            }
-            else {
-                if (input.value != password) {
-                    form_group.classList.add('error');
-                    form_group.classList.remove('success');
-                    err_span.innerHTML = 'Confirm password not match with password';
-                    break;
-                }
-            }
+            
             if (value.length < 6) {
                 form_group.classList.add('error');
                 form_group.classList.remove('success');
@@ -107,23 +108,17 @@ function checkSignUpInput(input) {
 }
 
 function checkSignUpForm() {
-    let inputs = signup_form.querySelectorAll('.form-group__input');
+    let inputs = signin_form.querySelectorAll('.form-group__input');
     inputs.forEach((input) => checkSignUpInput(input))
 }
-signup_btn.onclick = (event) => {
+signin_btn.onclick = (event) => {
     event.preventDefault();
     checkSignUpForm();
 }
 
-let inputs = signup_form.querySelectorAll('.form-group__input');
+let inputs = signin_form.querySelectorAll('.form-group__input');
 inputs.forEach(input => {
     input.addEventListener('keyup', () => {
-        checkSignUpInput(input);
-    })
-})
-
-inputs.forEach(input => {
-    input.addEventListener('focusout', () => {
         checkSignUpInput(input);
     })
 })

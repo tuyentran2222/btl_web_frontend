@@ -1,22 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>
-        E Learning
-    </title>
+    <title>E Learning</title>
+    <link rel = "icon" href ="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" type = "image/x-icon">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="base.css">
-    <link rel="stylesheet" href="index.css">
-    <script src="icons.js"></script>
+    <link rel="stylesheet" href="../css/index.css">
+    <script src="../js/icons.js"></script>
+    
 </head>
 <body>
-    <!--TOP NAVIGATION-->
+    <!---------------------TOP NAVIGATION-------------------->
     <header class="header" id="header">
         <nav class="nav container">
             <a href="#" class="nav__logo">E Learning</a>
@@ -25,103 +22,72 @@
                 <ul class="nav__list">
                     <li class="nav__item">
                         <a href="#home" class="nav__link active-link">
-                            <i class='bx bx-home-alt nav__icon'></i>
+                            <i class="bx bx-home-alt nav__icon"></i>
                             <span class="nav__name">Home</span>
                         </a>
                     </li>
                     
                     <li class="nav__item">
-                        <a href="#about" class="nav__link">
-                            <i class='bx bx-book-alt nav__icon' ></i>
+                        <a href="#" class="nav__link">
+                            <i class="bx bx-book-alt nav__icon" ></i>
                             <span class="nav__name">Grammar</span>
                         </a>
                     </li>
 
                     <li class="nav__item">
-                        <a href="#skills" class="nav__link">
-                            <i class='bx bx-video nav__icon' ></i>
+                        <a href="lesson.html" class="nav__link">
+                            <i class="bx bx-video nav__icon" ></i>
                             <span class="nav__name">Video</span>
                         </a>
                     </li>
 
                     <li class="nav__item">
-                        <a href="#portfolio" class="nav__link">
-                            <i class='bx bxs-music nav__icon' ></i>
+                        <a href="#" class="nav__link">
+                            <i class="bx bxs-music nav__icon" ></i>
                             <span class="nav__name">Audio</span>
                         </a>
                     </li>
 
                     <li class="nav__item">
-                        <a href="#contactme" class="nav__link">
-                            <i class='bx bx-message-square-detail nav__icon'></i>
+                        <a href="#" class="nav__link">
+                            <i class="bx bx-message-square-detail nav__icon"></i>
                             <span class="nav__name">Vocabulary</span>
                         </a>
                     </li>
                     <li class="nav__item">
-                        <a href="#contactme" class="nav__link">
-                            <i class='bx bx-log-in-circle nav__icon' ></i>
+                        <a href="login.html" class="nav__link">
+                            <i class="bx bx-log-in-circle nav__icon" ></i>
                             <span class="nav__name">Log in</span>
                         </a>
                     </li>
+                    <li class="nav__item" style="display: flex; align-items: center;">
+                        <i class="bx bxs-toggle-left" id="light" status="light" hidden="false" style = "font-size:2rem; transition: width 2s;" onclick="toggleStatus(event)" ></i>
+                        <i class="bx bxs-toggle-right" id="dark" status="dark" hidden="true" style = "font-size:2rem; " onclick="toggleStatus(event)" ></i>
+                        <span class="nav__name">Dark mode</span>
+                    </li>
                 </ul>
             </div>
-
-            <img src="assets/img/perfil.png" alt="" class="nav__img">
         </nav>
     </header>
-    <!-- <div class="nav">
-        <div class="menu-wrap">
-            <a href="#home">
-                <div class="logo">
-                    E Learning
-                </div>
-            </a>
-        
-            <div class="menu">
-                <a href="#grammar">
-                    <div class="menu-item">
-                        Grammar
-                    </div>
-                </a>
-                <a href="#video">
-                    <div class="menu-item">
-                        Videos
-                    </div>
-                </a>
-                <a href="#audio">
-                    <div class="menu-item">
-                        Audio
-                    </div>
-                </a>
-                <a href="#vocabulary">
-                    <div class="menu-item">
-                        Vocabulary
-                    </div>
-                </a>
-                <a href="login.html">
-                    <div class="menu-item">
-                        Log in
-                    </div>
-                </a>
-            </div>
-        </div>
-    </div> -->
+
+    <!--------------------SEARCH BAR------------------------>
     <section class="search-course">
         <div class="container">
             <div class="search-bar">
                 <input type="text" class="search-bar__input" name="searchCourse" placeholder="Search" autocomplete="off">
-                <button class="search-bar__btn btn-primary">Search</button>
+                <button class="search-bar__btn btn-primary" onclick="Test()">Search</button>
             </div>
         </div>
     </section>
 
+    <!-----------------INTRODUCTION SECTION---------------------->
     <section class="introduction-section">
         <div class="container">
             <div class="introduction__image" style="text-align: center;">
-                <img src="learner.png" alt="Learner">
+                <img src="../../assets/images/learner.png" alt="Learner">
             </div>
             <div class="introduction__text">
-                <div style="width: 100px; border-top: 15px var(--grey) solid;margin-bottom: 20px;"></div>
+                <div style="width: 100px; border-top: 15px var(--grey-color) solid;margin-bottom: 20px;"></div>
                 <h2>Welcome to E Learning</h2>
                 <p>Learn English online and improve your skills through our high-quality courses and resources – all designed for adult language learners. Everything you find here has been specially created by the British Council, the world's English teaching experts.</p>
             </div>
@@ -129,151 +95,151 @@
         </div>
     </section>
     
-    <section class="">
+    <!----------------SLIDER NEW COURSE------------------->
+    <section>
         <h2 style="text-align: center;">New Course Lists</h2>
         <div class="new-course container">
-
-        
-        <i id="next" class="fas fa-angle-right"></i>
-        <i id="previous" class="fas fa-angle-left"></i>
-        <div class="carousel">
-            <div class="course-item carousel-item ">
-                <img src="https://learnenglish.britishcouncil.org/sites/podcasts/files/styles/430x261_4/public/2021-09/GettyImages-1072206958_0.jpg?itok=qJTgFre7" alt="Course Item">
-                <div class="course-item-information">
-                    <h2 class="course-item__name">Course 1</h2>
-                    <div class="course-item__description">Online one-to-one English tutoring – enjoy your first session for </div>
-                    <div class="course-item__button">
-                        <button class="btn-primary course-btn">Learn more <i class='bx bx-right-arrow-alt'></i></button>
+            <i id="next" class="fas fa-angle-right"></i>
+            <i id="previous" class="fas fa-angle-left"></i>
+            <div class="carousel">
+                <div class="course-item carousel-item ">
+                    <img src="https://learnenglish.britishcouncil.org/sites/podcasts/files/styles/430x261_4/public/2021-09/GettyImages-1072206958_0.jpg?itok=qJTgFre7" alt="Course Item">
+                    <div class="course-item-information">
+                        <h2 class="course-item__name">Course 1</h2>
+                        <div class="course-item__description">Online one-to-one English tutoring – enjoy your first session for </div>
+                        <div class="course-item__button">
+                            <button class="btn-primary course-btn">Learn more <i class='bx bx-right-arrow-alt'></i></button>
+                        </div>
                     </div>
+                    
                 </div>
-                
-            </div>
-            <div class="course-item carousel-item ">
-                <img src="https://learnenglish.britishcouncil.org/sites/podcasts/files/styles/430x261_4/public/2021-09/GettyImages-1072206958_0.jpg?itok=qJTgFre7" alt="Course Item">
-                <div class="course-item-information">
-                    <h2 class="course-item__name">Course 2</h2>
-                    <div class="course-item__description">Online one-to-one English tutoring – enjoy your first session for </div>
-                    <div class="course-item__button">
-                        <button class="btn-primary course-btn">Learn more <i class='bx bx-right-arrow-alt' ></i></button>
+                <div class="course-item carousel-item ">
+                    <img src="https://learnenglish.britishcouncil.org/sites/podcasts/files/styles/430x261_4/public/2021-09/GettyImages-1072206958_0.jpg?itok=qJTgFre7" alt="Course Item">
+                    <div class="course-item-information">
+                        <h2 class="course-item__name">Course 2</h2>
+                        <div class="course-item__description">Online one-to-one English tutoring – enjoy your first session for </div>
+                        <div class="course-item__button">
+                            <button class="btn-primary course-btn">Learn more <i class='bx bx-right-arrow-alt' ></i></button>
+                        </div>
                     </div>
+                    
                 </div>
-                
-            </div>
-            <div class="course-item carousel-item ">
-                <img src="https://learnenglish.britishcouncil.org/sites/podcasts/files/styles/430x261_4/public/2021-09/GettyImages-1072206958_0.jpg?itok=qJTgFre7" alt="Course Item">
-                <div class="course-item-information">
-                    <h2 class="course-item__name">Course 3</h2>
-                    <div class="course-item__description">Online one-to-one English tutoring – enjoy your first session for </div>
-                    <div class="course-item__button">
-                        <button class="btn-primary course-btn">Learn more <i class='bx bx-right-arrow-alt' ></i></button>
+                <div class="course-item carousel-item ">
+                    <img src="https://learnenglish.britishcouncil.org/sites/podcasts/files/styles/430x261_4/public/2021-09/GettyImages-1072206958_0.jpg?itok=qJTgFre7" alt="Course Item">
+                    <div class="course-item-information">
+                        <h2 class="course-item__name">Course 3</h2>
+                        <div class="course-item__description">Online one-to-one English tutoring – enjoy your first session for </div>
+                        <div class="course-item__button">
+                            <button class="btn-primary course-btn">Learn more <i class='bx bx-right-arrow-alt' ></i></button>
+                        </div>
                     </div>
+                    
                 </div>
-                
-            </div>
-            <div class="course-item carousel-item ">
-                <img src="https://learnenglish.britishcouncil.org/sites/podcasts/files/styles/430x261_4/public/2021-09/GettyImages-1072206958_0.jpg?itok=qJTgFre7" alt="Course Item">
-                <div class="course-item-information">
-                    <h2 class="course-item__name">Course 4</h2>
-                    <div class="course-item__description">Online one-to-one English tutoring – enjoy your first session for </div>
-                    <div class="course-item__button">
-                        <button class="btn-primary course-btn">Learn more <i class='bx bx-right-arrow-alt' ></i></button>
+                <div class="course-item carousel-item ">
+                    <img src="https://learnenglish.britishcouncil.org/sites/podcasts/files/styles/430x261_4/public/2021-09/GettyImages-1072206958_0.jpg?itok=qJTgFre7" alt="Course Item">
+                    <div class="course-item-information">
+                        <h2 class="course-item__name">Course 4</h2>
+                        <div class="course-item__description">Online one-to-one English tutoring – enjoy your first session for </div>
+                        <div class="course-item__button">
+                            <button class="btn-primary course-btn">Learn more <i class='bx bx-right-arrow-alt' ></i></button>
+                        </div>
                     </div>
+                    
                 </div>
-                
-            </div>
-            <div class="course-item carousel-item ">
-                <img src="https://learnenglish.britishcouncil.org/sites/podcasts/files/styles/430x261_4/public/2021-09/GettyImages-1072206958_0.jpg?itok=qJTgFre7" alt="Course Item">
-                <div class="course-item-information">
-                    <h2 class="course-item__name">Course 5</h2>
-                    <div class="course-item__description">Online one-to-one English tutoring – enjoy your first session for </div>
-                    <div class="course-item__button">
-                        <button class="btn-primary course-btn">Learn more <i class='bx bx-right-arrow-alt' ></i></button>
+                <div class="course-item carousel-item ">
+                    <img src="https://learnenglish.britishcouncil.org/sites/podcasts/files/styles/430x261_4/public/2021-09/GettyImages-1072206958_0.jpg?itok=qJTgFre7" alt="Course Item">
+                    <div class="course-item-information">
+                        <h2 class="course-item__name">Course 5</h2>
+                        <div class="course-item__description">Online one-to-one English tutoring – enjoy your first session for </div>
+                        <div class="course-item__button">
+                            <button class="btn-primary course-btn">Learn more <i class='bx bx-right-arrow-alt' ></i></button>
+                        </div>
                     </div>
+                    
                 </div>
-                
-            </div>
-            <div class="course-item carousel-item ">
-                <img src="https://learnenglish.britishcouncil.org/sites/podcasts/files/styles/430x261_4/public/2021-09/GettyImages-1072206958_0.jpg?itok=qJTgFre7" alt="Course Item">
-                <div class="course-item-information">
-                    <h2 class="course-item__name">Course 6</h2>
-                    <div class="course-item__description">Online one-to-one English tutoring – enjoy your first session for </div>
-                    <div class="course-item__button">
-                        <button class="btn-primary course-btn">Learn more <i class='bx bx-right-arrow-alt' ></i></button>
+                <div class="course-item carousel-item ">
+                    <img src="https://learnenglish.britishcouncil.org/sites/podcasts/files/styles/430x261_4/public/2021-09/GettyImages-1072206958_0.jpg?itok=qJTgFre7" alt="Course Item">
+                    <div class="course-item-information">
+                        <h2 class="course-item__name">Course 6</h2>
+                        <div class="course-item__description">Online one-to-one English tutoring – enjoy your first session for </div>
+                        <div class="course-item__button">
+                            <button class="btn-primary course-btn">Learn more <i class='bx bx-right-arrow-alt' ></i></button>
+                        </div>
                     </div>
+                    
                 </div>
-                
-            </div>
-            <div class="course-item carousel-item ">
-                <img src="https://learnenglish.britishcouncil.org/sites/podcasts/files/styles/430x261_4/public/2021-09/GettyImages-1072206958_0.jpg?itok=qJTgFre7" alt="Course Item">
-                <div class="course-item-information">
-                    <h2 class="course-item__name">Course 7</h2>
-                    <div class="course-item__description">Online one-to-one English tutoring – enjoy your first session for </div>
-                    <div class="course-item__button">
-                        <button class="btn-primary course-btn">Learn more <i class='bx bx-right-arrow-alt' ></i></button>
+                <div class="course-item carousel-item ">
+                    <img src="https://learnenglish.britishcouncil.org/sites/podcasts/files/styles/430x261_4/public/2021-09/GettyImages-1072206958_0.jpg?itok=qJTgFre7" alt="Course Item">
+                    <div class="course-item-information">
+                        <h2 class="course-item__name">Course 7</h2>
+                        <div class="course-item__description">Online one-to-one English tutoring – enjoy your first session for </div>
+                        <div class="course-item__button">
+                            <button class="btn-primary course-btn">Learn more <i class='bx bx-right-arrow-alt' ></i></button>
+                        </div>
                     </div>
+                    
                 </div>
-                
-            </div>
-            <div class="course-item carousel-item ">
-                <img src="https://learnenglish.britishcouncil.org/sites/podcasts/files/styles/430x261_4/public/2021-09/GettyImages-1072206958_0.jpg?itok=qJTgFre7" alt="Course Item">
-                <div class="course-item-information">
-                    <h2 class="course-item__name">Course 8</h2>
-                    <div class="course-item__description">Online one-to-one English tutoring – enjoy your first session for </div>
-                    <div class="course-item__button">
-                        <button class="btn-primary course-btn">Learn more <i class='bx bx-right-arrow-alt' ></i></button>
+                <div class="course-item carousel-item ">
+                    <img src="https://learnenglish.britishcouncil.org/sites/podcasts/files/styles/430x261_4/public/2021-09/GettyImages-1072206958_0.jpg?itok=qJTgFre7" alt="Course Item">
+                    <div class="course-item-information">
+                        <h2 class="course-item__name">Course 8</h2>
+                        <div class="course-item__description">Online one-to-one English tutoring – enjoy your first session for </div>
+                        <div class="course-item__button">
+                            <button class="btn-primary course-btn">Learn more <i class='bx bx-right-arrow-alt' ></i></button>
+                        </div>
                     </div>
+                    
                 </div>
-                
-            </div>
-            <div class="course-item carousel-item ">
-                <img src="https://learnenglish.britishcouncil.org/sites/podcasts/files/styles/430x261_4/public/2021-09/GettyImages-1072206958_0.jpg?itok=qJTgFre7" alt="Course Item">
-                <div class="course-item-information">
-                    <h2 class="course-item__name">Course 9</h2>
-                    <div class="course-item__description">Online one-to-one English tutoring – enjoy your first session for </div>
-                    <div class="course-item__button">
-                        <button class="btn-primary course-btn">Learn more <i class='bx bx-right-arrow-alt' ></i></button>
+                <div class="course-item carousel-item ">
+                    <img src="https://learnenglish.britishcouncil.org/sites/podcasts/files/styles/430x261_4/public/2021-09/GettyImages-1072206958_0.jpg?itok=qJTgFre7" alt="Course Item">
+                    <div class="course-item-information">
+                        <h2 class="course-item__name">Course 9</h2>
+                        <div class="course-item__description">Online one-to-one English tutoring – enjoy your first session for </div>
+                        <div class="course-item__button">
+                            <button class="btn-primary course-btn">Learn more <i class='bx bx-right-arrow-alt' ></i></button>
+                        </div>
                     </div>
+                    
                 </div>
-                
-            </div>
-            <div class="course-item carousel-item ">
-                <img src="https://learnenglish.britishcouncil.org/sites/podcasts/files/styles/430x261_4/public/2021-09/GettyImages-1072206958_0.jpg?itok=qJTgFre7" alt="Course Item">
-                <div class="course-item-information">
-                    <h2 class="course-item__name">Course 10</h2>
-                    <div class="course-item__description">Online one-to-one English tutoring – enjoy your first session for </div>
-                    <div class="course-item__button">
-                        <button class="btn-primary course-btn">Learn more <i class='bx bx-right-arrow-alt' ></i></button>
+                <div class="course-item carousel-item ">
+                    <img src="https://learnenglish.britishcouncil.org/sites/podcasts/files/styles/430x261_4/public/2021-09/GettyImages-1072206958_0.jpg?itok=qJTgFre7" alt="Course Item">
+                    <div class="course-item-information">
+                        <h2 class="course-item__name">Live online classes with expert teachers</h2>
+                        <div class="course-item__description">Boost your English skills and confidence. Join classmates from around the world in 100% online teacher-led classes and interactive lessons, customised and available 24/7.</div>
+                        <div class="course-item__button">
+                            <button class="btn-primary course-btn">Learn more <i class='bx bx-right-arrow-alt' ></i></button>
+                        </div>
                     </div>
+                    
                 </div>
-                
-            </div>
-            <div class="course-item carousel-item ">
-                <img src="https://learnenglish.britishcouncil.org/sites/podcasts/files/styles/430x261_4/public/2021-09/GettyImages-1072206958_0.jpg?itok=qJTgFre7" alt="Course Item">
-                <div class="course-item-information">
-                    <h2 class="course-item__name">Course 11</h2>
-                    <div class="course-item__description">Online one-to-one English tutoring – enjoy your first session for </div>
-                    <div class="course-item__button">
-                        <button class="btn-primary course-btn">Learn more <i class='bx bx-right-arrow-alt' ></i></button>
+                <div class="course-item carousel-item ">
+                    <img src="https://learnenglish.britishcouncil.org/sites/podcasts/files/styles/430x261_4/public/2021-09/GettyImages-1072206958_0.jpg?itok=qJTgFre7" alt="Course Item">
+                    <div class="course-item-information">
+                        <h2 class="course-item__name">Course 11</h2>
+                        <div class="course-item__description">Online one-to-one English tutoring – enjoy your first session for </div>
+                        <div class="course-item__button">
+                            <button class="btn-primary course-btn">Learn more <i class='bx bx-right-arrow-alt' ></i></button>
+                        </div>
                     </div>
+                    
                 </div>
-                
-            </div>
-            <div class="course-item carousel-item ">
-                <img src="https://learnenglish.britishcouncil.org/sites/podcasts/files/styles/430x261_4/public/2021-09/GettyImages-1072206958_0.jpg?itok=qJTgFre7" alt="Course Item">
-                <div class="course-item-information">
-                    <h2 class="course-item__name">Course 12</h2>
-                    <div class="course-item__description">Online one-to-one English tutoring – enjoy your first session for </div>
-                    <div class="course-item__button">
-                        <button class="btn-primary course-btn">Learn more <i class='bx bx-right-arrow-alt' ></i></button>
+                <div class="course-item carousel-item ">
+                    <img src="https://learnenglish.britishcouncil.org/sites/podcasts/files/styles/430x261_4/public/2021-09/GettyImages-1072206958_0.jpg?itok=qJTgFre7" alt="Course Item">
+                    <div class="course-item-information">
+                        <h2 class="course-item__name">Course 12</h2>
+                        <div class="course-item__description">Online one-to-one English tutoring – enjoy your first session for </div>
+                        <div class="course-item__button">
+                            <button class="btn-primary course-btn">Learn more <i class='bx bx-right-arrow-alt' ></i></button>
+                        </div>
                     </div>
+                    
                 </div>
-                
             </div>
-        </div>
         </div>
     </section>
 
-    <section id="home" class="home" >
+    <!--------------------COURSE LISTS---------------------->
+    <section class="home" >
         <h2 style="text-align: center;">Course Lists</h2>
         <div class="container">
             <div class="course-list">
@@ -368,6 +334,8 @@
             </div>
         </div>
     </section>
+
+    <!-------------------FOOTER------------------------>
     <section>
         <div class="container faqs">
             <div class="faq-title">
@@ -421,7 +389,7 @@ English proficiency can also be a vital asset for your communications skills for
             <div class="row-footer">
                 <div class="footer__slogan">
                     <h2>E Learning</h2>
-                    <p>Learn English online and improve your skills through our high-quality courses and resources – all designed for adult language learners. Everything you find here has been specially created by the British Council, the world's English teaching experts.</p>
+                    <p style="padding: 20px 50px 15px 0px;">Learn English online and improve your skills through our high-quality courses and resources – all designed for adult language learners. Everything you find here has been specially created by the British Council, the world's English teaching experts.</p>
                 </div>
                 <div class="footer_navigation">
                     <h2>Navigation</h2>
@@ -446,5 +414,6 @@ English proficiency can also be a vital asset for your communications skills for
         </div>
         <div style="text-align: center;font-weight: bolder;">Group 24-©copyright 2021</div>
     </section>
-    <script src="index.js"></script>
+    <script src="../js/navigation.js"></script>
+    <script src="../js/index.js"></script>
 </body>

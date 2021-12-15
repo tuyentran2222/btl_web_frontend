@@ -1,27 +1,6 @@
-:root {
-    --background-color: #f0f3f7;
-    --second-color: #9da2ad;
-    --grey: #7a7a7b;
-    --white: #ffffff;
-    --box-shadow: 5px -1px 13px 0px rgba(0,0,0,0.36);
-    --border-radius: 15px;
-    --font-size: 16px;
-    --primary-color-btn:#0093cf;
-    --danger-color: #FF0000;
-    --success-color: #00FF00;
-    --info--color:#0dcaf0;
-    --warning-color: #ffc107;
-    --dark-color: #212529;
-    --light-color:#f8f9fa;
-    --secondary-color:#0d6efd;
-    --border-color: #2980b9;
-    --font-size-mb : 12px;
-    --background-color-1: #ffffff;
-    --border : 1px solid rgb(221, 221, 221);
-}
+@import url(../css/config.css);
 body {
     height: 100vh;
-    background-color: #f6f6f6;
 }
 
 .s-container{
@@ -35,22 +14,23 @@ body {
     text-indent: 30px;
     height: 46px;
     width: 100%;
-    border: 1px solid var(--grey);
+    border: var(--border-light);
     border-radius:var(--border-radius);
     padding: 0 20px;
     font-size: var(--font-size);
     outline: none;
+    color: var(--text-color);
 }
 .form-group {
     max-width: 500px;
     position: relative;
     margin-bottom: 10px;
 }
-.register ,.login {
+.register, .login {
     width: 500px;
     padding: 30px 50px;
     /* box-shadow:var(--box-shadow); */
-    background-color: #fff;
+    background-color: transparent;
     border: var(--border);
     border-radius: 0;
     padding-bottom: 50px;
@@ -61,7 +41,8 @@ body {
     display: flex;
     justify-content: center;
     min-height: 300px;
-    margin: auto;   
+    margin: auto;  
+    background-color: var(--background-color-item);
 }
 
 .form-group__icon {
@@ -146,4 +127,9 @@ body {
 }
 .signup-birthday {
     text-indent: 15px !important;
+}
+
+input {
+    background-color: transparent;
+    border: var(--border-none);
 }

@@ -1,92 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>
-        E Learning
-    </title>
+    <title>E Learning</title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="lesson.css">
-    <link rel="stylesheet" href="index.css">
-    
-    <script src="index.js"></script>
-    <script src="icons.js"></script>
+    <link rel="stylesheet" href="../css/lesson.css">
+    <link rel="stylesheet" href="../css/index.css">
+    <script src="../js/icons.js"></script>
 </head>
-
 
 <body>
     <!----------------TOP NAVIGATION-------------------->
     <header class="header" id="header">
-        <nav class="nav container">
-            <a href="#" class="nav__logo">E Learning</a>
-
-            <div class="nav__menu" id="nav-menu">
-                <ul class="nav__list">
-                    <li class="nav__item">
-                        <a href="#home" class="nav__link active-link">
-                            <i class='bx bx-home-alt nav__icon'></i>
-                            <span class="nav__name">Home</span>
-                        </a>
-                    </li>
-                    
-                    <li class="nav__item">
-                        <a href="#about" class="nav__link">
-                            <i class='bx bx-book-alt nav__icon' ></i>
-                            <span class="nav__name">Grammar</span>
-                        </a>
-                    </li>
-
-                    <li class="nav__item">
-                        <a href="#skills" class="nav__link">
-                            <i class='bx bx-video nav__icon' ></i>
-                            <span class="nav__name">Video</span>
-                        </a>
-                    </li>
-
-                    <li class="nav__item">
-                        <a href="#portfolio" class="nav__link">
-                            <i class='bx bxs-music nav__icon' ></i>
-                            <span class="nav__name">Audio</span>
-                        </a>
-                    </li>
-
-                    <li class="nav__item">
-                        <a href="#contactme" class="nav__link">
-                            <i class='bx bx-message-square-detail nav__icon'></i>
-                            <span class="nav__name">Vocabulary</span>
-                        </a>
-                    </li>
-                    <li class="nav__item">
-                        <a href="#contactme" class="nav__link">
-                            <i class='bx bx-log-in-circle nav__icon' ></i>
-                            <span class="nav__name">Log in</span>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
+        
     </header>
 
+    <!----------------LESSON-CONTENT--------------------->
     <section>
+        <div class="lesson-detail container">
+            <div class="course-name">
+                <h2><i style="color: crimson;font-size: 20px; font-weight: 200;" class='bx bxl-youtube'></i> Course: Likes and Favorites</h2>
+            </div>
+            <div class="lesson" style="margin: 0px 0px 20px 0px;">
+                <div class="lesson__title">
+                    <h2><i style="color: crimson;font-size: 20px; font-weight: 200;" class='bx bxs-book-alt'></i> Lesson 10: Lesson 10</h2>
+                </div>
+            </div>
+        </div>
         <div class="lesson-container container">
             <div class="left-container">
-                <div class="course-name" style="margin: 20px 0px;">
-                    <h3><i style="color: crimson;font-size: 20px; font-weight: 200;" class="far fa-caret-square-right"></i> Course: Likes and Favorites</h3>
-                </div>
-                <div class="lesson" style="margin: 0px 0px 20px 0px;">
-                    <div class="lesson__title">
-                        <h3><i style="color: crimson;font-size: 20px; font-weight: 200;" class="fab fa-leanpub"></i> Lesson 10: Lesson 10</h3>
-                    </div>
-                </div>
                 <iframe width="100%" height="600px" src="http://www.youtube.com/embed/IStS6E0uGhE?autoplay=1" frameborder="0" allowfullscreen></iframe>
                 <div class="tab">
-                    <button value="transcript" class="tablinks" onclick="openTab(event, 'transcript')" id="defaultOpen"><i class="far fa-bookmark"></i> Transcript</button>
-                    <button value="quiz" class="tablinks" onclick="openTab(event, 'quiz')"><i class="far fa-question-circle"></i> Quiz</button>
+                    <button value="transcript" class="tab-links" onclick="openTab(event, 'transcript')" id="defaultOpen"><i class="far fa-bookmark"></i> Transcript</button>
+                    <button value="quiz" class="tab-links" onclick="openTab(event, 'quiz')"><i class="far fa-question-circle"></i> Quiz</button>
                 </div>
                 <div id="quiz" class="tab-content">
                     <p>Answer the following questions about the interview.</p>
@@ -147,13 +96,16 @@
                  <hr/>
                  
                 <div class="continue-lesson">
-                    <h3>Watch next  <i class="fas fa-arrow-circle-right" style="color: var(--danger-color);font-size: 20px;"></i></i></h3>
+                    <h3>Watch next <i class='bx bxs-right-arrow-square bx-fade-right' style="color: var(--danger-color);font-size: 20px;" ></i></h3>
                     <div class="lessons">
                         <div class="lesson-card">
                             <div class="lesson-card-left">
                                   <a href="#" class="lesson-card__index">
                                       <b>Lesson 2</b>
                                   </a>
+                                  <div class="lesson-card__time">
+                                    <i class='bx bx-time-five' style='color:#7d7d7d'>10-12-2021</i> 
+                                  </div>
                                   <div class="lesson-card__content">
                                     How to make radical climate action the new normal
                                   </div>
@@ -161,7 +113,7 @@
                             <a href="#" class="lesson-card-right">
                                 <i class="far fa-play-circle"></i>
                                 <div class="lesson-length">13:45</div>
-                                <img src="JohnDoerr_HalHarvey_2020T-embed.jpg" alt="Anh dai dien">
+                                <img src="../../assets/images/AlGore_2021T-embed.jpg" alt="Anh dai dien">
                             </a>
                             
                         </div>
@@ -170,13 +122,16 @@
                                   <a href="#" class="lesson-card__index">
                                       <b>Lesson 2</b>
                                   </a>
+                                  <div class="lesson-card__time">
+                                    <i class='bx bx-time-five' style='color:#7d7d7d'></i> 10-12-2021
+                                  </div>
                                   <div class="lesson-card__content">
                                     How to make radical climate action the new normal
                                   </div>
                             </div>
                             <div class="lesson-card-right">
                                 <i class="far fa-play-circle" ></i>
-                                <img src="AlGore_2021T-embed.jpg" alt="Anh dai dien">
+                                <img src="../../assets/images/AlGore_2021T-embed.jpg" alt="Anh dai dien">
                             </div>
                             
                         </div>
@@ -185,13 +140,16 @@
                                   <a href="#" class="lesson-card__index">
                                       <b>Lesson 2</b>
                                   </a>
+                                  <div class="lesson-card__time">
+                                    <i class='bx bx-time-five' style='color:#7d7d7d'></i> 10-12-2021
+                                  </div>
                                   <div class="lesson-card__content">
                                     How to make radical climate action the new normal
                                   </div>
                             </div>
                             <a href="#" class="lesson-card-right">
                                 <i class="far fa-play-circle"></i>
-                                <img src="AlGore_2021T-embed.jpg" alt="Anh dai dien">
+                                <img src="../../assets/images/AlGore_2021T-embed.jpg" alt="Anh dai dien">
                             </a>
                             
                         </div>
@@ -200,6 +158,9 @@
                                   <a href="#" class="lesson-card__index">
                                       <b>Lesson 2</b>
                                   </a>
+                                  <div class="lesson-card__time">
+                                    <i class='bx bx-time-five' style='color:#7d7d7d'></i> 10-12-2021
+                                  </div>
                                   <div class="lesson-card__content">
                                     How to make radical climate action the new normal
                                   </div>
@@ -207,7 +168,7 @@
                             <a href="#" class="lesson-card-right">
                                 <i class="far fa-play-circle"></i>
                                 <div class="lesson-length">02:11</div>
-                                <img src="AlGore_2021T-embed.jpg" alt="Anh dai dien">
+                                <img src="../../assets/images/AlGore_2021T-embed.jpg" alt="Anh dai dien">
                             </a>
                             
                         </div>
@@ -216,6 +177,9 @@
                                   <a href="#" class="lesson-card__index">
                                       <b>Lesson 2</b>
                                   </a>
+                                  <div class="lesson-card__time">
+                                    <i class='bx bx-time-five' style='color:#7d7d7d'></i> 10-12-2021
+                                  </div>
                                   <div class="lesson-card__content">
                                     How to make radical climate action the new normal
                                   </div>
@@ -223,7 +187,7 @@
                             <a href="#" class="lesson-card-right">
                                 <i class="far fa-play-circle"></i>
                                 <div class="lesson-length">03:11</div>
-                                <img src="AlGore_2021T-embed.jpg" alt="Anh dai dien">
+                                <img src="../../assets/images/AlGore_2021T-embed.jpg" alt="Anh dai dien">
                             </a>
                             
                         </div>
@@ -232,13 +196,16 @@
                                   <a href="#" class="lesson-card__index">
                                       <b>Lesson 2</b>
                                   </a>
+                                  <div class="lesson-card__time">
+                                    <i class='bx bx-time-five' style='color:#7d7d7d'>10-12-2021</i> 
+                                  </div>
                                   <div class="lesson-card__content">
                                     How to make radical climate action the new normal
                                   </div>
                             </div>
                             <a href="#" class="lesson-card-right">
                                 <i class="far fa-play-circle"></i>
-                                <img src="AlGore_2021T-embed.jpg" alt="Anh dai dien">
+                                <img src="../../assets/images/AlGore_2021T-embed.jpg" alt="Anh dai dien">
                             </a>
                             
                         </div>
@@ -288,6 +255,15 @@
             </div>
         </div>
     </section>
+
+    <!-------------------------FOOTER-------------------------->
+    <section class="footer" id="footer">
+
+    </section>
     
-    <script src="lesson.js"></script>
+    <!----------------------ADD JS FILE------------------------>
+    <script src="../js/navigation.js"></script>
+    <script src="../js/footer.js"></script>
+    <script src="../js/lesson.js"></script>
+    <script src="../js/darkmode.js"></script>
 </body>

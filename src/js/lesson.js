@@ -1,3 +1,15 @@
+let dark = localStorage.getItem('dark');
+if (dark == 'true') {
+  let root = document.querySelector(':root');
+    root.style.setProperty('--background-color', 'black');
+    root.style.setProperty('--text-color', '#FFFFFF');
+    root.style.setProperty('color', '#FFFFFF');
+    root.style.setProperty('--border-none', 'var(--border)');
+    root.style.setProperty('--background-color-item', 'black');
+    root.style.setProperty('--title-color', '#FFFFFF');
+    console.log('123')
+}
+
 function openTab(event,pageName) {
     var i, tabcontent, tablinks;
     tabcontent = document.getElementsByClassName("tab-content");
@@ -6,7 +18,7 @@ function openTab(event,pageName) {
       tabcontent[i].style.display = "none";
     }
 
-    tablinks = document.getElementsByClassName("tablinks");
+    tablinks = document.getElementsByClassName("tab-links");
     console.log(pageName);
     for (i = 0; i < tablinks.length; i++) {
       if (pageName === tablinks[i].value) {
