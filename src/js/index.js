@@ -5,7 +5,7 @@ let div = document.getElementsByClassName('carousel-item');
 
 let l = 0;
 let style_left = 310;
-if (window.innerWidth <= 767) style_left = 270;
+// if (window.innerWidth <= 767) style_left = 290;
 let lmax = 2480 / style_left;
 next.onclick = () => {
     l++;
